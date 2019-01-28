@@ -1,5 +1,5 @@
 ---
-title: "Análise exploratória de associações em dados dados de pacientes com pubalgia atlética no Brasil"
+title: "Análise exploratória de associações em dados de pacientes com pubalgia atlética no Brasil"
 author: '**De:** Felipe Figueiredo **Para:** Rodrigo Góes'
 date: '**Data: ** dd/mm/aaaa'
 output:
