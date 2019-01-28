@@ -1,5 +1,5 @@
 ---
-title: "Análise exploratória de dados de pacientes com pubalgia atlética no Brasil"
+title: "Análise exploratória de associações em dados dados de pacientes com pubalgia atlética no Brasil"
 author: '**De:** Felipe Figueiredo **Para:** Rodrigo Góes'
 date: '**Data: ** dd/mm/aaaa'
 output:
@@ -19,7 +19,7 @@ output:
     fig_width: 6
     reference_docx: misc/style.docx
     toc: yes
-subtitle: 'RELATÓRIO: analise_dados_RG_2018-v01'
+subtitle: 'RELATÓRIO: analise_dados_RG_2019-v01'
 toc-title: "Sumário"
 ---
 
@@ -84,7 +84,6 @@ pander(history, split.cells = 70)
 
 ```{r include=FALSE}
 source("scripts/resultados.R", encoding = 'UTF-8')
-source("scripts/visualizacoes.R", encoding = 'UTF-8')
 ```
 
 Esta análise foi realizada utilizando-se o software `R` versão `r getRversion()`.
@@ -93,42 +92,11 @@ Esta análise foi realizada utilizando-se o software `R` versão `r getRversion(
 
 # Resultados
 
-## Distribuição das modalidades esportivas praticadas pelos atletas com pubalgia
-
 ```{r atividades esportivas}
 N.esportes.fig1 <- sort(table(esportes$ESPORTE), decreasing = TRUE)
 N.princ.fig1 <- sort(table(esportes$PRINCIPAL, esportes$ESPORTE)[1, ], decreasing = TRUE)
 N.sec.fig1 <- sort(table(esportes$PRINCIPAL, esportes$ESPORTE)[2, ], decreasing = TRUE)
 ```
-
-Nesta série de casos, os atletas com pubalgia relataram praticar 25 modalidades esportivas distintas (figura 1).
-Três esportes se destacam como os mais comuns entre os participantes, seja como atividade esportiva principal ou secundária.
-Quando incluímos todos os atletas que praticam as modalidades esportivas sem considerar a atividade principal ou secundária temos
-o futebol (N = `r N.esportes.fig1[1]`),
-a corrida (N = `r N.esportes.fig1[2]`)
-e a musculação (N = `r N.esportes.fig1[3]`).
-
-![**Figura 1** Prevalência dos esportes nos atletas com pubalgia](../figures/esp_prev.png)
-
-As três modalidades globalmente mais comuns são também as selecionadas mais tipicamente tanto como esporte principal quanto como esporte secundário.
-Quando consideradas apenas as modalidades principais dos atletas, o futebol foi selecionado como atividade principal por
-`r N.princ.fig1[1]` atletas,
-enquanto que a corrida e a musculação foram selecionadas por
-`r N.princ.fig1[2]` e
-`r N.princ.fig1[3]` atletas, respectivamente.
-Juntas estas três modalidades esportivas representam
-`r format.pct(sum(N.princ.fig1[1:3])/sum(N.princ.fig1))`
-da amostra (`r sum(N.princ.fig1[1:3])` de `r sum(N.princ.fig1)`).
-As três modalidades mais selecionadas pelos atletas como esportes secundários ou acessórios são
-a musculação (N = `r N.sec.fig1[1]`),
-a corrida (N = `r N.sec.fig1[2]`)
-e o futebol (N = `r N.sec.fig1[3]`).
-Juntas estas três modalidades representam
-`r format.pct(sum(N.sec.fig1[1:3])/sum(N.sec.fig1))`
-dos esportes secundários dos atletas com pubalgia
-(`r sum(N.sec.fig1[1:3])` de `r sum(N.sec.fig1)`).
-
-### Atividades auxiliares dos praticantes de futebol
 
 ```{r atividades secundárias futebol}
 N.sec.fut <- sort(with(
@@ -136,34 +104,11 @@ N.sec.fut <- sort(with(
                        ), decreasing = TRUE)
 ```
 
-As duas modalidades esportivas mais praticadas como atividade auxiliar pelos participantes com pubalgia atlética que praticam primariamente o futebol são a
-musculação (N = `r N.sec.fut[1]`)
-e a corrida (N = `r N.sec.fut[2]`).
-Juntos estas duas modalidades representam
-`r format.pct(sum(N.sec.fut[1:2])/sum(N.sec.fut))`
-dos esportes secundários dos atletas com pubalgia (`r sum(N.sec.fut[1:2])` de `r sum(N.sec.fut)`).
-
-![**Figura 2** Esportes auxiliares ao futebol](../figures/esp_sec_fut.png)
-
-### Atividades auxiliares dos praticantes de corrida
-
 ```{r atividades secundárias corrida}
 N.sec.corr <- sort(with(
   esportes[ID %in% ids.corrida & PRINCIPAL == "Secundário"], table(PRINCIPAL, ESPORTE)[2, ]
   ), decreasing = TRUE)
 ```
-
-As duas modalidades esportivas mais praticadas como atividade auxiliar pelos participantes com pubalgia atlética que praticam primariamente a corrida são a
-musculação (N = `r N.sec.corr[1]`)
-e futebol (N = `r N.sec.corr[2]`).
-Juntos estas duas modalidades representam
-`r format.pct(sum(N.sec.corr[1:2])/sum(N.sec.corr))`
-dos esportes secundários dos atletas com pubalgia (`r sum(N.sec.corr[1:2])` de `r sum(N.sec.corr)`).
-
-![**Figura 3** Esportes auxiliares à corrida](../figures/esp_sec_corr.png)
-
-
-### Atividades auxiliares dos praticantes de musculação
 
 ```{r atividades secundárias musculação}
 N.sec.musc <- sort(with(
@@ -171,22 +116,7 @@ N.sec.musc <- sort(with(
   ), decreasing = TRUE)
 ```
 
-As duas modalidades esportivas mais praticadas como atividade auxiliar pelos participantes com pubalgia atlética que praticam primariamente o futebol são a
-musculação (N = `r N.sec.musc[1]`)
-e a corrida (N = `r N.sec.musc[2]`).
-Juntos estas duas modalidades representam
-`r format.pct(sum(N.sec.musc[1:2])/sum(N.sec.musc))`
-dos esportes secundários dos atletas com pubalgia (`r sum(N.sec.musc[1:2])` de `r sum(N.sec.musc)`).
-
-![**Figura 4** Esportes auxiliares à musculação](../figures/esp_sec_musc.png)
-
-## Avaliação das modalides esportivas
-
-### Associação com os exames físicos
-
-```{r}
-pander(tab.ef)
-```
+## Avaliação dos esportes mais praticados
 
 ### Associação com desfecho cirúrgico e movimentos em que sente dor
 
@@ -208,13 +138,6 @@ Table: **Tabela xx** Associação entre o tempo até o diagnóstico e os exames 
 <!-- # Exceções e Desvios do teste -->
 
 # Discussão
-
-Esta série de casos avaliou as distribuições dos esportes praticados por atletas com pubalgia em 25 modalidades desportivas, tanto como esporte principal como atividade secundária ou acessória (figura 1).
-Não é surpreendente que, no Brasil, o futebol seja o esporte mais praticado pelos pacientes atendidos com pubalgia.
-Neste estudo, no entanto, os atletas que demonstraram preferência por este esporte são não somente mais frequentes, mas também são os que mais praticam outras atividades (figuras 2, 3 e 4).
-A discrepância na opção por atividades acessórias é marcante:
-`r sum(N.sec.fut)` jogadores de futebol relataram praticar atividades secundárias,
-enquanto que os dados de atletas de corrida e musculação são consideravelmente (`r sum(N.sec.corr)` e `r sum(N.sec.musc)`, respectivamente).
 
 # Conclusões
 
