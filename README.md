@@ -35,7 +35,7 @@ Manuscrito em elaboração com Diogo Noronha (colaborador) e Rodrigo Góes (coor
 <!-- - Download -->
 
 [releases]: https://github.com/philsf-biostat/analise_dados_RG_2019/releases/
-[milestone-prequal]: https://github.com/philsf-biostat/analise_dados_RG_2019/milestone/2
+[milestone-prequal]: https://github.com/philsf-biostat/analise_dados_RG_2019/milestone/1
 [reportviz-v01]: report/analise_dados_RG_2019-v01.md
 [docx-v01]: report/analise_dados_RG_2019-v01.docx?raw=true
 [pdf-v01]: report/analise_dados_RG_2019-v01.pdf?raw=true
