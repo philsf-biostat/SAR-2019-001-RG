@@ -98,24 +98,6 @@ N.princ.fig1 <- sort(table(esportes$PRINCIPAL, esportes$ESPORTE)[1, ], decreasin
 N.sec.fig1 <- sort(table(esportes$PRINCIPAL, esportes$ESPORTE)[2, ], decreasing = TRUE)
 ```
 
-```{r atividades secundárias futebol}
-N.sec.fut <- sort(with(
-  esportes[ID %in% ids.futebol & PRINCIPAL == "Secundário"], table(PRINCIPAL, ESPORTE)[2, ]
-                       ), decreasing = TRUE)
-```
-
-```{r atividades secundárias corrida}
-N.sec.corr <- sort(with(
-  esportes[ID %in% ids.corrida & PRINCIPAL == "Secundário"], table(PRINCIPAL, ESPORTE)[2, ]
-  ), decreasing = TRUE)
-```
-
-```{r atividades secundárias musculação}
-N.sec.musc <- sort(with(
-  esportes[ID %in% ids.musculacao & PRINCIPAL == "Secundário"], table(PRINCIPAL, ESPORTE)[2, ]
-  ), decreasing = TRUE)
-```
-
 ## Avaliação dos esportes mais praticados
 
 ### Associação com desfecho cirúrgico e movimentos em que sente dor
