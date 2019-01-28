@@ -117,6 +117,10 @@ pander(tab.tempo, split.table = Inf)
 ```
 Table: **Tabela xx** Associação entre o tempo até o diagnóstico e os exames físicos, nível esportivo e idade.
 
+## Avaliação dos locais de dor
+
+### Associação com tempo até o diagnóstico e a modalidade esportiva
+
 <!-- # Exceções e Desvios do teste -->
 
 # Discussão
