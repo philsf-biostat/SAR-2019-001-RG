@@ -98,7 +98,7 @@ N.princ.fig1 <- sort(table(esportes$PRINCIPAL, esportes$ESPORTE)[1, ], decreasin
 N.sec.fig1 <- sort(table(esportes$PRINCIPAL, esportes$ESPORTE)[2, ], decreasing = TRUE)
 ```
 
-## Avaliação dos esportes mais praticados
+## Avaliação dos esportes mais praticados pelos atletas com pubalgia
 
 ### Associação com desfecho cirúrgico e movimentos em que sente dor
 
@@ -109,7 +109,7 @@ pander(tab.esportes, split.table = Inf)
 
 ## Avaliação do tempo até o diagnóstico
 
-### Associação com os exames físicos
+### Associação com os exames físicos, nível esportivo e idade
 
 ```{r}
 pander(tab.tempo, split.table = Inf)
