@@ -1,4 +1,4 @@
-# Análise de Dados projeto Pubalgia Atlética (Artigo, 2018)
+# Análise de Dados projeto Pubalgia Atlética (Artigo, 2019)
 
 Análise epidemiológica dos pacientes com pubalgia atlética no Brasil
 
@@ -6,7 +6,7 @@ Manuscrito em elaboração com Diogo Noronha (colaborador) e Rodrigo Góes (coor
 
 ## Análises realizadas
 
-1. Análise descritiva ([Planejamento][proj-xxx])
+1. Associações ([Planejamento][proj-xxx])
 <!-- 2. yyy ([Planejamento][proj-yyy]) -->
 <!-- 3. zzz ([Planejamento][proj-zzz]) -->
 
@@ -18,7 +18,7 @@ Manuscrito em elaboração com Diogo Noronha (colaborador) e Rodrigo Góes (coor
 
 [Ver as etapas desta análise][releases].
 
-**Versão 01 - Análise exploratória de dados** - [Em elaboração][milestone-prequal].
+**Versão 01 - Associações entre variáveis** - [Em elaboração][milestone-prequal].
 
 [Planejamento][v01-project].
 
