@@ -81,8 +81,6 @@ Esta análise foi realizada utilizando-se o software `R` versão 3.4.4.
 
 ## Avaliação dos esportes mais praticados pelos atletas com pubalgia
 
-### Associação com desfecho cirúrgico e movimentos em que sente dor
-
 
 |      &nbsp;       |  FUTEBOL  |  CORRIDA  | MUSCULAÇÃO |  OUTROS   |   p   | test  |
 |:-----------------:|:---------:|:---------:|:----------:|:---------:|:-----:|:-----:|
@@ -96,9 +94,9 @@ Esta análise foi realizada utilizando-se o software `R` versão 3.4.4.
 |       **4**       | 46 (12.7) | 10 (11.4) |  4 (12.9)  | 26 (16.2) |       |       |
 |       **5**       | 97 (26.7) | 12 (13.6) |  5 (16.1)  | 29 (18.1) |       |       |
 
-## Avaliação do tempo até o diagnóstico
+Table: **Tabela xx** Associação entre a modalidade esportiva com desfecho cirúrgico e movimentos em que sente dor
 
-### Associação com os exames físicos, nível esportivo e idade
+## Avaliação do tempo até o diagnóstico
 
 
 |          &nbsp;           |  <= 90d   |   > 90d   |   p   | test  |
@@ -124,11 +122,14 @@ Esta análise foi realizada utilizando-se o software `R` versão 3.4.4.
 |       **< 25 anos**       | 20 (16.9) | 25 (19.7) |       |       |
 |      **25-40 anos**       | 70 (59.3) | 72 (56.7) |       |       |
 |       **> 40 anos**       | 28 (23.7) | 30 (23.6) |       |       |
-Table: **Tabela xx** Associação entre o tempo até o diagnóstico e os exames físicos, nível esportivo e idade.
+
+Table: **Tabela xx** Associação entre o tempo até o diagnóstico e os exames físicos, nível esportivo e a idade dos participantes.
 
 ## Avaliação dos locais de dor
 
-### Associação com tempo até o diagnóstico e a modalidade esportiva
+
+
+Table: **Tabela xx** Associação do local de dor com tempo até o diagnóstico e a modalidade esportiva
 
 <!-- # Exceções e Desvios do teste -->
 
