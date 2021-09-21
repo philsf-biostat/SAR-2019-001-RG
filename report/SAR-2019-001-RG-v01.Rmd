@@ -80,7 +80,7 @@ N.sec.fig1 <- sort(table(esportes$PRINCIPAL, esportes$ESPORTE)[2, ], decreasing 
 ## Avaliação dos esportes mais praticados pelos atletas com pubalgia
 
 ```{r}
-tab.esportes %>% pander(
+tab.esportes[, -6] %>% pander(
   caption = "**Tabela 1** Associação entre a modalidade esportiva com desfecho cirúrgico e movimentos em que sente dor.
   p = Teste exato de Fisher."
 )
@@ -91,7 +91,7 @@ tab.esportes %>% pander(
 ## Avaliação do tempo até o diagnóstico
 
 ```{r}
-tab.tempo %>% pander(
+tab.tempo[, -4] %>% pander(
   caption = "**Tabela 2** Associação entre o tempo até o diagnóstico e os exames físicos, nível esportivo e a idade dos participantes.
   p = Teste exato de Fisher."
 )
