@@ -1,6 +1,6 @@
 # Análise epidemiológica de pacientes com pubalgia atlética no Brasil
 
-Objetivo
+Avaliar a associação entre a performance dos exames clínicos, as modalidades esportivas, níveis de dedicação ao esporte e idade em relação ao tempo até o diagnóstico de pubalgia atlética.
 
 Manuscrito em elaboração com Diogo Noronha (colaborador) e Rodrigo Góes (coordenador) (INTO, 2019).
 

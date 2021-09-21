@@ -55,6 +55,8 @@ kable(history)
 
 ## Objetivos
 
+Avaliar a associação entre a performance dos exames clínicos, as modalidades esportivas, níveis de dedicação ao esporte e idade em relação ao tempo até o diagnóstico de pubalgia atlética.
+
 ## Recepção e tratamento dos dados
 
 # Metodologia
